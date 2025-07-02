@@ -44,11 +44,11 @@
 html {
     scroll-behavior: smooth;
 }
-#root {
+/* #root {
     align-items: center;
     justify-content: center;
     height: 100vh;
-}
+} */
 
 body {
     text-wrap: pretty;
@@ -158,29 +158,39 @@ section {
 /* Project Specific */
 .section-container {
 	width: 100%;
-	height: 100vh;
 	display: flex;
+    flex-direction: row;
 	flex-wrap: wrap;
+    align-items: stretch;
 }
 
 .section-container:nth-child(odd) {
 	flex-direction: row-reverse;
 }
-
-.section-container > section:nth-child(1) {
-	flex: 1 1 50%;
-	box-sizing: border-box;
-}
-
-.section-container > section:nth-child(2) {
-	flex: 1 1 50%; /* You were missing this! */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-}
 .section-container > section:nth-child(2) img {
+    display: flex;
+    align-items: stretch;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+a {
+    font-size: var(--font-md);
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    flex-direction: column !important;
+  }
+
+  .section-container > section {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .registry-text, .photos-text {
+    max-width: 80vw !important;
+    margin: var(--spacing3);
+  }
 }

@@ -11,7 +11,9 @@ import Photos from './pages/photos';
 function App() {
 	return (
 		<>
-			<Navbar/>
+			{/* <div className="navbar">
+				<Navbar/>
+			</div> */}
 			<Home/>
 			<RSVP/>
 			<Info/>

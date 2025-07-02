@@ -4,8 +4,8 @@
     position: absolute;
 }
 .navbar-body {
-    backdrop-filter: blur(40px);
-    background: hsla(360, 0%, 100%, 0.05);
+    /* backdrop-filter: blur(40px);
+    background: hsla(360, 0%, 100%, 0.05); */
     height: 1.5rem;
     display: flex;
     align-items: center;

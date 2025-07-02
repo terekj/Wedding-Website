@@ -11,7 +11,12 @@ function Home() {
 					<p className="text">Be our guest.</p>
 					<div className="title">Breanna & Jacob</div>
 					<p className="text">September 25, 2025<br/>Canyon Country, CA</p>
-					<Countdown date="2025-09-20T14:00:00" className="countdown"/>
+					<Countdown
+						date="2025-09-20T14:00:00"
+						className="countdown"
+						units={["months", "days", "hours", "minutes", "seconds"]}
+					/>
+
 				</div>
 			</section>
 			<section id="home-picture">
