@@ -10,7 +10,7 @@ function Home() {
 				<div className="home-content">
 					<p className="text">Be our guest.</p>
 					<div className="title">Breanna & Jacob</div>
-					<p className="text">September 25, 2025<br/>Canyon Country, CA</p>
+					<p className="text">September 20, 2025<br/>Canyon Country, CA</p>
 					<Countdown
 						date="2025-09-20T14:00:00"
 						className="countdown"

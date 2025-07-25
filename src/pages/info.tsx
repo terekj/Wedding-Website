@@ -29,6 +29,9 @@ function Info() {
 								No children or extended invitation<br />
 								unless directed otherwise.
 							</p>
+							<p>
+								No smoking or vaping on the venue premises.
+							</p>
 						</div>
 					</div>
 					</div>
@@ -58,7 +61,6 @@ function Info() {
 						<h4>What will the food options include?</h4>
 						<p>
 							There will be tacos during the reception, including vegetarian options.
-							Any dietary restrictions should be declared in the RSVP.
 						</p>
 					</div>
 
@@ -82,9 +84,8 @@ function Info() {
 						<p>Check the registry page!</p>
 					</div>
 
-					{/* <div className="faq-entry footer"> */}
-					<h4 className="faq-footer">Any further questions can be directed to (661)-309-0733.</h4>
-					{/* </div> */}
+					<h4 className="faq-footer">Any further questions can be directed to (661)-309-0733 or contact@breannaandjacob.wedding.</h4>
+
 				</section>
 			</div>
 	);

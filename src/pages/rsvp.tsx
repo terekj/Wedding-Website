@@ -26,13 +26,12 @@ type GuestResponse = {
 function RSVP() {
 	const [verified, setVerified] = React.useState(false);
 	const [allotment, setAllotment] = React.useState(1);
-	const [count, setCount] = React.useState(0);
 	const [verifyValues, setVerifyValues] = React.useState<GuestLookupFields>({ pin: '', surname: '' });
 
 	const {
 		register: registerVerify,
 		handleSubmit: handleVerify,
-		formState: { errors: verifyErrors , isSubmitting: isVerifying},
+		formState: { errors: verifyErrors, isSubmitting: isVerifying },
 		reset: resetVerify,
 	} = useForm<GuestLookupFields>();
 
@@ -62,7 +61,6 @@ function RSVP() {
 			setVerified(true);
 			setVerifyValues(data);
 			setAllotment(guest.allotment);
-			setCount(guest.attendees || 0);
 			setValue('email', guest.email);
 			setValue('address', guest.address);
 			setValue('attendees', guest.attendees || 0);
@@ -90,26 +88,9 @@ function RSVP() {
 			resetRSVP();
 			resetVerify();
 			setVerified(false);
-			setCount(0);
 		} catch (err) {
 			console.error(err);
 			alert('RSVP failed. Try again later.');
-		}
-	};
-
-	const increment = () => {
-		if (count < allotment) {
-			const next = count + 1;
-			setCount(next);
-			setValue('attendees', next);
-		}
-	};
-
-	const decrement = () => {
-		if (count > 0) {
-			const next = count - 1;
-			setCount(next);
-			setValue('attendees', next);
 		}
 	};
 
@@ -172,13 +153,20 @@ function RSVP() {
 								/>
 								{rsvpErrors.address && <p className="error">{rsvpErrors.address.message}</p>}
 
-								<label>Attending Guests <span>(max {allotment})</span></label>
-								<div className="attendee-selector">
-									<p id="guest-count">{count}</p>
-									<button type="button" className="arrow decrement" onClick={decrement} disabled={count === 0}>▽</button>
-									<button type="button" className="arrow increment" onClick={increment} disabled={count === allotment}>△</button>
-								</div>
-								<input type="hidden" {...registerRSVP("attendees", { required: true })} />
+								<label>Attending Guests</label>
+								<input
+									className="attendee-number"
+									type="number"
+									min={0}
+									max={allotment}
+									{...registerRSVP("attendees", {
+										required: true,
+										min: { value: 0, message: "Must be at least 0" },
+										max: { value: allotment, message: `Cannot exceed ${allotment}` },
+										valueAsNumber: true,
+									})}
+								/>
+								{rsvpErrors.attendees && <p className="error">{rsvpErrors.attendees.message}</p>}
 
 								<button disabled={isSaving} type="submit">
 									{isSaving ? 'Saving...' : 'Save RSVP'}
