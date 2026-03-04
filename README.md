@@ -1,5 +1,7 @@
 # Wedding Website
 
+![Laptop Mockup](assets/mockup.png)
+
 This repository contains the source code for a wedding website. The site provides guests with event details, RSVP functionality, and general information (FAQ, Registry, Photos).
 
 The goal of the site is to centralize all wedding information in one place while keeping the experience simple and visually elegant.
@@ -29,6 +31,8 @@ The goal of the site is to centralize all wedding information in one place while
 - **Responsive Design**  
   Layout adapts to mobile, tablet, and desktop devices.
 
+  ![Full Page Layout](assets/Wedding%20Website.png)
+  
 ---
 
 ## Tech Stack
@@ -105,6 +109,8 @@ After a successful RSVP submission, the backend sends a confirmation email to th
 Emailing system also used to send announcements and updates to different target audiences (invitees, rsvp'ed guests, etc.).
 
 Email sending is handled using **Nodemailer** through an SMTP provider.
+
+![Email Example](assets/email.png)
 
 ---
 
