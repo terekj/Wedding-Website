@@ -32,20 +32,22 @@
     font-family: var(--ff);
 }
 
-.info-left {
+.info-right {
     height: auto;
 	text-align: center;
 }
 
-.info-right {
+.info-left {
     margin: 0 1.5rem 0.5rem 1.5rem;
 }
 
 .info-heading,
 .rules-heading {
-	color: var(--color400);
-	font-size: 1.8rem;
+	color: var(--color200);
+	font-size: 3rem;
 	margin-bottom: 1rem;
+	font-family: 'Imperial Script', serif;
+	font-weight: normal;
 }
 
 .rules-heading {
@@ -71,10 +73,11 @@
 	font-size: 0.95rem;
 }
 
-.info-right {
+.info-left {
 	flex: 1;
 	max-width: 50vw;
 	padding: 1rem;
+	margin: 1rem;
 }
 
 .faq-heading {

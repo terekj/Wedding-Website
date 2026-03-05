@@ -1,0 +1,28 @@
+.status-container {
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+.status {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    padding: var(--spacing3);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: clamp(1.5rem, 5vw, 4rem);
+}
+.attendees {
+    color: var(--color200);
+}
+.allotted {
+    color: var(--color400);
+}
+.table {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: var(--font-md);
+    text-align: left;
+    margin-top: 1rem;
+}

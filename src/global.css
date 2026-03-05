@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
     margin: 0;
@@ -56,6 +56,7 @@ body {
     font-size: var(--font-sm);
     font-weight: var(--weight-regular);
     font-style: normal;
+    
 }
 
 h1, h2, p {
@@ -68,9 +69,9 @@ a {
 }
 
 /* Utility Classes */
-section {
+/* section {
     max-width: 1080px;
-}
+} */
 
 .centering {
     text-align: center;
@@ -156,6 +157,10 @@ section {
 .font-bold    { font-weight: var(--weight-bold); }
 
 /* Project Specific */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
 .section-container {
 	width: 100%;
 	display: flex;
@@ -192,5 +197,9 @@ a {
   .registry-text, .photos-text {
     max-width: 80vw !important;
     margin: var(--spacing3);
+  }
+
+  #home {
+    margin-top: var(--spacing3);
   }
 }
