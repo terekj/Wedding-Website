@@ -18,7 +18,6 @@ function Navbar() {
                 <a href="#home" className="logo-link centering">
                     <img src={logo} alt="logo" />
                 </a>
-                <a href="#rsvp" className="link"><SlCalender /> RSVP</a>
                 <a href="#info" className="link"><SlInfo /> INFO</a>
                 <a href="#registry" className="link"><SlPresent /> REGISTRY</a>
                 <a href="#photos" className="link"><SlPicture /> PHOTOS</a>

@@ -32,12 +32,12 @@
     font-family: var(--ff);
 }
 
-.info-left {
+.info-right {
     height: auto;
 	text-align: center;
 }
 
-.info-right {
+.info-left {
     margin: 0 1.5rem 0.5rem 1.5rem;
 }
 
@@ -73,7 +73,7 @@
 	font-size: 0.95rem;
 }
 
-.info-right {
+.info-left {
 	flex: 1;
 	max-width: 50vw;
 	padding: 1rem;

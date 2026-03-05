@@ -5,7 +5,6 @@ import './global.css';
 
 import Navbar from './components/navbar';
 import Home from './pages/home';
-import RSVP from './pages/rsvp';
 import Info from './pages/info';
 import Registry from './pages/registry';
 import Photos from './pages/photos';
@@ -18,7 +17,6 @@ function LandingPage() {
 				<Navbar />
 			</div>
 			<Home />
-			<RSVP />
 			<Info />
 			<Registry />
 			<Photos />
